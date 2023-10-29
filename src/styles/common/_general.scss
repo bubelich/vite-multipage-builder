@@ -1,0 +1,21 @@
+* {
+  font-family: $font-default;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: $text-color-defailt;
+  font-feature-settings: 'lnum';
+  -webkit-tap-highlight-color: transparent !important;
+}
+body {
+  background: $bg-default;
+  @media(min-width: $bp-min-768) {
+    overflow: hidden auto;
+  }
+}
+.container {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}

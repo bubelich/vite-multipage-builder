@@ -1,0 +1,22 @@
+{
+  "name": "vite-multipage-builder",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "node": ">=18.18.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-twig": "^1.0.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.0.3",
+    "prettier-eslint": "^16.1.2",
+    "sass": "^1.69.5",
+    "vite": "^4.4.5",
+    "vituum": "^1.0.0"
+  }
+}

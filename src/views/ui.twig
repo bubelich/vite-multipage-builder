@@ -1,0 +1,115 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Pages List" %}
+
+{% block page %}
+	<style>
+		*,
+		*::before,
+		*::after {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		html, body, div, h1, h2, ul, li, a, span {
+			font-family: 'Arial', sans-serif;
+			font-weight: normal;
+			font-size: 14px;
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul, li {
+			list-style: none;
+		}
+		h1 {
+			font-weight: bold;
+			font-size: 50px;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 20px 0px;
+		}
+		ul {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			max-width: 1460px;
+			padding: 20px;
+			margin: 0 auto;
+		}
+		li {
+			padding: 20px;
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+		}
+		a {
+			display: block;
+			-webkit-transform-origin: 50% 0;
+			-ms-transform-origin: 50% 0;
+			transform-origin: 50% 0;
+			text-align: center;
+			text-decoration: none;
+			padding: 10px;
+			background: #ffffff;
+			border: 1px solid #cecece;
+			border-radius: 12px;
+			-webkit-transition: all 0.3s;
+			-o-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		span {
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+		div {
+			height: 250px;
+			width: 100%;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			-webkit-transition: all 0.4s;
+			-o-transition: all 0.4s;
+			transition: all 0.4s;
+		}
+		a:hover {
+			-webkit-transform: scale(1.15);
+			-ms-transform: scale(1.15);
+			transform: scale(1.15);
+		}
+		a:hover .title {
+			text-decoration: underline;
+		}
+		@media all and (max-width: 1366px) {
+			li {
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 50%;
+				flex: 0 0 50%;
+			}
+		}
+		@media all and (max-width: 650px) {
+			li {
+				padding: 10px;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+			}
+			div {
+				height: 200px;
+			}
+		}
+	</style>
+
+	<h1>Pages: {{ listHtml()|length }}</h1>
+	<ul>
+		{% for html in listHtml() %}
+			<li>
+				<a href="/{{ html.file }}" target="_blank">
+					<span>{{ html.title }}</span>
+					<div style="background-image: url('')"></div>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

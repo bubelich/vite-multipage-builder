@@ -1,0 +1,15 @@
+$font-default: "Roboto", Arial, sans-serif;
+$bg-default: #ffffff;
+$text-color-defailt: #000000;
+
+// Breakpoints
+$bp-max-1024: 1023px;
+$bp-max-768: 767px;
+$bp-max-425: 424px;
+
+$bp-min-1024: 1024px;
+$bp-min-768: 768px;
+$bp-min-425: 425px;
+
+// Helpers
+$base-size-px: 16px; // Base font size in px (helpers/_functions.scss)

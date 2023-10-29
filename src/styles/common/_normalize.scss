@@ -1,0 +1,35 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+button, a {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body :focus:not(.focus-visible) {
+	outline: none !important;
+	box-shadow: none !important;
+}
+body :focus-visible {
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, .8) !important;
+}
+input[type=number] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
