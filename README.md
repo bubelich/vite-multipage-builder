@@ -25,7 +25,7 @@ package.json"
 yarn add package_name -D 
 ```
 
-- The installation of the package, while the information about it is automatically registered in the "dependencies" section of the "package" file.json"
+- The installation of the package, while the information about it is automatically registered in the "dependencies" section of the "package.json"
 
 ```bash
 yarn add package_name
